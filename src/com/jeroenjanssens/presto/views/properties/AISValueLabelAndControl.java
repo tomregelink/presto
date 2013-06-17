@@ -77,7 +77,7 @@ public class AISValueLabelAndControl {
 				}
 			});
 			control.addFocusListener(new FocusAdapter() {@Override
-			public void focusLost(FocusEvent evt) {parent.restore();}});
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter, ((Text) control).getText());}});
 			
 		} else if(aisParameter.getType().equals(Boolean.class)) {
 			control = new Combo(composite, SWT.BORDER | SWT.READ_ONLY);
@@ -106,7 +106,7 @@ public class AISValueLabelAndControl {
 				}
 			});
 			control.addFocusListener(new FocusAdapter() {@Override
-			public void focusLost(FocusEvent evt) {parent.restore();}});
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter, ((Text) control).getText().replace(",", "."));}});
 			
 		} else if(aisParameter.getType().equals(Integer.class)) {
 			control = new Text(composite, SWT.BORDER);
@@ -119,7 +119,7 @@ public class AISValueLabelAndControl {
 				}
 			});
 			control.addFocusListener(new FocusAdapter() {@Override
-			public void focusLost(FocusEvent evt) {parent.restore();}});
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter, ((Text) control).getText().replace(",", "."));}});
 		} else if(aisParameter.getType().equals(AISNavigationStatus.class)) {
 			control = new Combo(composite, SWT.BORDER | SWT.READ_ONLY);
 			((Combo) control).add("");			
@@ -132,7 +132,8 @@ public class AISValueLabelAndControl {
 					parent.saveAISValue(aisParameter,  Integer.valueOf(((Combo) control).getSelectionIndex()));
 				}
 			});
-			
+			control.addFocusListener(new FocusAdapter() {@Override
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter,  Integer.valueOf(((Combo) control).getSelectionIndex()));}});
 		} else if(aisParameter.getType().equals(CDateTime.class)) {
 			control = new CDateTime(composite, CDT.TAB_FIELDS | CDT.CLOCK_24_HOUR | CDT.DATE_LONG | CDT.TIME_MEDIUM | CDT.BORDER | CDT.SPINNER);
 			((CDateTime) control).setPattern("MMMM d yyyy '@' HH:mm:ss");
@@ -144,6 +145,8 @@ public class AISValueLabelAndControl {
 					parent.saveAISValue(aisParameter, Long.valueOf(((CDateTime) control).getSelection().getTime()));
 				}
 			});
+			control.addFocusListener(new FocusAdapter() {@Override
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter, Long.valueOf(((CDateTime) control).getSelection().getTime()));}});
 		} else {
 			control = new Text(composite, SWT.BORDER);
 			control.addKeyListener(new KeyAdapter() {
@@ -155,7 +158,7 @@ public class AISValueLabelAndControl {
 				}
 			});
 			control.addFocusListener(new FocusAdapter() {@Override
-			public void focusLost(FocusEvent evt) {parent.restore();}});
+			public void focusLost(FocusEvent evt) {parent.saveAISValue(aisParameter, ((Text) control).getText());}});
 		}
 
 		GridData LData = new GridData();

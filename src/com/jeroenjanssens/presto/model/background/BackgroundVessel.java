@@ -32,6 +32,7 @@ public class BackgroundVessel implements Serializable {
 	private static final long serialVersionUID = 4243891499965382111L;
 	
 	private int IMONumber;
+	private int MMSINumber;
   
 	public int getIMONumber() {
 		return IMONumber;
@@ -41,4 +42,11 @@ public class BackgroundVessel implements Serializable {
 		IMONumber = number;
 	}
 	
+	public void setMMSINumber(int number) {
+		MMSINumber = number;
+	}
+	
+	public int getMMSINumber() {
+		return MMSINumber;
+	}
 }

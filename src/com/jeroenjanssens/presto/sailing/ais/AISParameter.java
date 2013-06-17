@@ -28,6 +28,7 @@ import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 
 public enum AISParameter {
 	//Static parameters:
+	MMSI				("MMSI Number", false, Integer.class),
 	IMO 				("IMO Number", false, Integer.class),
 	SHIP_TYPE 			("Ship Type", false, Integer.class),
 	CALLSIGN			("Call Sign", false, String.class),

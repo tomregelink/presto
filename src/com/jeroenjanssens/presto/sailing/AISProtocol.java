@@ -446,13 +446,14 @@ public class AISProtocol implements IProtocol {
 	 */
 	private Ship getShip(AISState aisMessage) {
 		int imo = (Integer)aisMessage.getSafe(AISParameter.IMO);
+		int mmsi = (Integer) aisMessage.getSafe(AISParameter.MMSI);
 		Ship ret = listShips.get(imo);
 		
 		// create a new ship if not yet existing
 		if (ret == null) {
 			ret = new Ship();
 			// Generate a possible MMSI, out of the IMO so it is different for each ship
-			ret.MMSI = 200000000 + imo;
+			ret.MMSI = mmsi;
 			ret.IMO = imo;
 			listShips.put(imo, ret);
 		}

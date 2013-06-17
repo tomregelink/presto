@@ -252,7 +252,7 @@
             name="Presto">
          <property
                name="aboutText"
-               value="Presto 1.0.0&#x0A;&#x0A;Developed by Jeroen Janssens&#x0A;Copyright 2009 Tilburg University. All rights reserved.&#x0A;&#x0A;Presto is free software: you can redistribute it and/or modify&#x0A;it under the terms of the GNU General Public License as published by&#x0A;the Free Software Foundation, either version 3 of the License, or&#x0A;(at your option) any later version.&#x0A;&#x0A;Presto is distributed in the hope that it will be useful,&#x0A;but WITHOUT ANY WARRANTY; without even the implied warranty of&#x0A;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&#x0A;GNU General Public License for more details.&#x0A;&#x0A;You should have received a copy of the GNU General Public License&#x0A;along with Presto.  If not, see &lt;http://www.gnu.org/licenses/&gt;.">
+               value="Presto 1.0.1&#x0A;&#x0A;Developed by Jeroen Janssens&#x0A;Copyright 2009 Tilburg University. All rights reserved.&#x0A;&#x0A;Presto is free software: you can redistribute it and/or modify&#x0A;it under the terms of the GNU General Public License as published by&#x0A;the Free Software Foundation, either version 3 of the License, or&#x0A;(at your option) any later version.&#x0A;&#x0A;Presto is distributed in the hope that it will be useful,&#x0A;but WITHOUT ANY WARRANTY; without even the implied warranty of&#x0A;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&#x0A;GNU General Public License for more details.&#x0A;&#x0A;You should have received a copy of the GNU General Public License&#x0A;along with Presto.  If not, see &lt;http://www.gnu.org/licenses/&gt;.">
          </property>
          <property
                name="windowImages"

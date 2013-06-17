@@ -68,6 +68,7 @@ public class StaticAISMessage extends AISMessage {
 
     private byte AISVersionIndicator;
     private int IMONumber;
+    private int MMSINumber;
     private String callSign;
     private String name;
     private int typeOfShip;
@@ -91,6 +92,9 @@ public class StaticAISMessage extends AISMessage {
     private void parseBitString() {
         String bits = getBitString();
 
+        // 30 bits
+        MMSINumber = bits2Int(bits.substring(8, 38), false);
+        
         // 2 bits
         AISVersionIndicator = (byte) bits2Int(bits.substring(38, 40), false);
 

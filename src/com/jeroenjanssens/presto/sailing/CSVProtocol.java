@@ -40,6 +40,7 @@ public class CSVProtocol implements IProtocol {
 		String s = "";
 		
 		s += "Date and time, ";
+		s += AISParameter.MMSI.getTextName() + ", ";
 		s += AISParameter.IMO.getTextName() + ", ";
 		s += AISParameter.LATITUDE.getTextName() + ", ";
 		s += AISParameter.LONGITUDE.getTextName() + ", ";
@@ -56,6 +57,7 @@ public class CSVProtocol implements IProtocol {
 		String s = "";
 		
 		s += aisMessage.getTime() + ",";
+		s += aisMessage.getSafe(AISParameter.MMSI) + ", ";
 		s += aisMessage.getSafe(AISParameter.IMO) + ",";
 		s += aisMessage.getSafe(AISParameter.LATITUDE) + ",";
 		s += aisMessage.getSafe(AISParameter.LONGITUDE) + ",";
