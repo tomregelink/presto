@@ -317,12 +317,12 @@ public class AISProtocol implements IProtocol {
 		String nmea2 = "";
 		// Pre Header (special for our case)
 		// It contains some special info, but we care only about the time!
-		s += "^M^M rawtostampedMsg^L 113";
+		//s += "^M^M rawtostampedMsg^L 113";
 		//Time (number of second from UTC, with 1000th of second separated by a "."
 		String time = Long.toString(aisMessage.getTime());
-		s += "^UT " + time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3);
+		s += time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3);
 		// End
-		s += "^EOH^";
+		s += " - ";
 
 		// The encoded AIS data (the meat)
 		String payload = encodeMessageStatic(aisMessage, mmsi);
@@ -376,12 +376,12 @@ public class AISProtocol implements IProtocol {
 		String nmea = "";
 		// Pre Header (special for our case)
 		// It contains some special info, but we care only about the time!
-		s += "^M^M rawtostampedMsg^L 48";
+		//s += "^M^M rawtostampedMsg^L 48";
 		//Time (number of second from UTC, with 1000th of second separated by a "."
 		String time = Long.toString(aisMessage.getTime());
-		s += "^UT " + time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3);
+		s += time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3);
 		// End
-		s += "^EOH^";
+		s += " - ";
 
 		// Header
 		nmea += "!AIVDM";
