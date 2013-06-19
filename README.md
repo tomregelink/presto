@@ -12,6 +12,27 @@ In *Proceedings of the 22nd Benelux Conference on Artificial Intelligence*, Luxe
 
 [Tilburg University](http://www.tilburguniversity.edu/), [Embedded Systems Institute](http://www.esi.nl/), and [Thales Nederland BV](http://www.thalesgroup.com/NLHome/) have kindly given permission to make Presto open source.
 
+
+
+Build Presto from source
+-----------------------
+
+To build the Presto application, you will need [Eclipse 3.4.2](http://www.eclipse.org/downloads/packages/eclipse-classic-342/ganymedesr2) with the RCP plugin (Rich Client Applications) and a Windows machine.
+
+Import Presto in Eclipse:
+
+ 1. In the Eclipse package explorer, right-click and select Import
+ 2. Under Plug-in Developement, select Plugin-ins and Fragments and click Next
+ 3. Specify the plugin location
+ 4. In 'Add Source Code Locations', add source (Presto/src)
+ 5. Click Next
+ 6. You will get a list of plug-ins and fragments found. Select Presto and click Add
+ 7. Click Finish to import the Presto plugin
+
+You should now be able to build and run Presto in Eclipse.
+
+
+
 License
 -------
 
