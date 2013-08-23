@@ -320,9 +320,8 @@ public class AISProtocol implements IProtocol {
 		//s += "^M^M rawtostampedMsg^L 113";
 		//Time (number of second from UTC, with 1000th of second separated by a "."
 		String time = Long.toString(aisMessage.getTime());
-		s += time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3);
-		// End
-		s += " - ";
+		//for each part add intro : time stamp + dash
+		string intro = time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3) + " - "; 
 
 		// The encoded AIS data (the meat)
 		String payload = encodeMessageStatic(aisMessage, mmsi);
@@ -344,7 +343,7 @@ public class AISProtocol implements IProtocol {
 		nmea1 += ",0*";
 		// NMEA checksum
 		nmea1 += nmeaChecksum(nmea1);
-		s += nmea1 + "\n";
+		s += intro + nmea1 + "\n";
 
 		// Second part (11 chars)
 		// Header
@@ -363,7 +362,7 @@ public class AISProtocol implements IProtocol {
 		nmea2 += ",2*";
 		// NMEA checksum
 		nmea2 += nmeaChecksum(nmea2);
-		s += nmea2 + "\n";
+		s += intro + nmea2 + "\n";
 
 		return s;
 	}
