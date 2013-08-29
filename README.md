@@ -17,7 +17,7 @@ In *Proceedings of the 22nd Benelux Conference on Artificial Intelligence*, Luxe
 Build Presto from source
 -----------------------
 
-To build the Presto application, you will need [Eclipse 3.4.2](http://www.eclipse.org/downloads/packages/eclipse-classic-342/ganymedesr2) with the RCP plugin (Rich Client Applications) and a Windows machine.
+To build the Presto application, you will need [Eclipse 3.4.2 for RCP/Plug-in Developers](http://www.eclipse.org/downloads/packages/eclipse-rcpplug-developers/ganymedesr2) with the RCP plugin (Rich Client Applications) and a Windows machine.
 
 Import Presto in Eclipse:
 
