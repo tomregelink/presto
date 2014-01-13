@@ -321,7 +321,7 @@ public class AISProtocol implements IProtocol {
 		//Time (number of second from UTC, with 1000th of second separated by a "."
 		String time = Long.toString(aisMessage.getTime());
 		//for each part add intro : time stamp + dash
-		string intro = time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3) + " - "; 
+		String intro = time.substring(0, time.length() - 3) + "." + time.substring(time.length() - 3) + " - "; 
 
 		// The encoded AIS data (the meat)
 		String payload = encodeMessageStatic(aisMessage, mmsi);
